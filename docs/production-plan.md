@@ -32,23 +32,12 @@ Level A to B rather than lowering quality.
 
 ---
 
-## 3. Placeholder shot structure
+## 3. Episode 1 shot structure
 
-To be replaced by the approved shot list at gate G2.
-
-| Shot | Length | Content | Level |
-|---|---|---|---|
-| sh010 | 5 s | Establishing view of the world, slow push | C |
-| sh020 | 4 s | Hero medium shot, wind, first line | B |
-| sh030 | 3 s | Eyes close-up, eyes open | A |
-| sh040 | 5 s | Second character dialogue, over-the-shoulder | B |
-| sh050 | 4 s | Threat reveal, low angle, particles | C |
-| sh060 | 3 s | Hero snaps a turn | A |
-| sh070 | 5 s | Dialogue exchange, cutting back and forth | B |
-| sh080 | 6 s | Spell cast (hero moment) | A |
-| sh090 | 4 s | FX fill the frame, camera shake | C/A |
-| sh100 | 5 s | Aftermath close-up, emotional line | B |
-| sh110 | 6 s | Cliffhanger + title card | C |
+The placeholder structure has been replaced by the Episode 1 package
+"एक नई शुरुआत" in `story/ep01/` (17 shots, 1,200 frames). Timing source:
+`story/ep01/shotlist.yaml`. Overview and drawing budget (≈ 236 drawings):
+`story/ep01/timeline.md`. Status: script lock candidate (gate G2).
 
 ---
 

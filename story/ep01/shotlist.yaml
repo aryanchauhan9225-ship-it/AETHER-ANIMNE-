@@ -1,0 +1,310 @@
+# AETHER — Episode 1 "एक नई शुरुआत" (Ek Nayi Shuruaat / A New Beginning)
+# SINGLE SOURCE OF TIMING. All other Ep01 documents follow this file.
+# 24 fps · 1920x1080 · 1200 frames = 50.000 s
+# Frames are 0-based and the end frame is excluded: a shot covers [start, end).
+# Timecodes are seconds from episode start.
+# level: A = full frame-by-frame (on 2s) · B = limited animation (on 3s) · C = drawn layers + camera + FX
+# Status: SCRIPT LOCK CANDIDATE (gate G2). No artwork or animation exists yet.
+
+episode:
+  id: ep01
+  title_hi: "एक नई शुरुआत"
+  title_rom: "Ek Nayi Shuruaat"
+  title_en: "A New Beginning"
+  fps: 24
+  width: 1920
+  height: 1080
+  total_frames: 1200
+
+scenes:
+  - { id: SC1, name: "Cold open — narration",       start: 0,    end: 96 }
+  - { id: SC2, name: "Previous life & regrets",     start: 96,   end: 264 }
+  - { id: SC3, name: "Awakening in Astral Nexus",   start: 264,  end: 408 }
+  - { id: SC4, name: "Elaria materializes",         start: 408,  end: 552 }
+  - { id: SC5, name: "The truth",                   start: 552,  end: 744 }
+  - { id: SC6, name: "Another chance?",             start: 744,  end: 852 }
+  - { id: SC7, name: "Acceptance",                  start: 852,  end: 960 }
+  - { id: SC8, name: "Sent to a new world",         start: 960,  end: 1068 }
+  - { id: SC9, name: "Born again",                  start: 1068, end: 1200 }
+
+shots:
+  - id: sh010
+    scene: SC1
+    start: 0
+    end: 96
+    duration_s: 4.0
+    level: C
+    framing: extreme wide (cosmos)
+    background: bg01_cosmos
+    characters: []
+    camera: "slow push-in through 4 star layers toward a single igniting star; ease-in, 1.15x scale over the shot"
+    fx: [star ignition flare, drifting dust motes, faint nebula breathing]
+    light: "single warm point source, centre frame"
+    dialogue:
+      - { id: N1, speaker: aether_vo, on_screen: false, start: 12, end: 94,
+          hi: "कहते हैं... हर अंत, एक नई शुरुआत होता है।" }
+
+  - id: sh020
+    scene: SC2
+    start: 96
+    end: 168
+    duration_s: 3.0
+    level: B
+    framing: wide, high angle, side tracking
+    background: bg02_city_rain
+    characters: [aether_adult]
+    camera: "slow lateral track right with 3-layer parallax (crowd/umbrellas fg, street mid, neon far)"
+    fx: [rain on 1s, wet-street reflections, neon glow layer]
+    light: "cold blue streetlight top-left, neon magenta/cyan rims"
+    acting: "Aether walks alone against the crowd flow, shoulders slumped, no umbrella, lanyard swinging"
+    dialogue:
+      - { id: N2a, speaker: aether_vo, on_screen: false, start: 104, end: 160,
+          hi: "छब्बीस साल... बस भागता रहा।" }
+
+  - id: sh030
+    scene: SC2
+    start: 168
+    end: 228
+    duration_s: 2.5
+    level: B
+    framing: insert close-up (hand + phone)
+    background: bg02_city_rain (defocused)
+    characters: [aether_adult]
+    camera: "locked; slight 2px handheld drift on 1s"
+    fx: [raindrops hitting screen, screen glow on fingers]
+    light: "phone screen key from below, cool"
+    acting: "Thumb hovers over 'माँ — 3 मिस्ड कॉल', hesitates (hold 12f), then presses the lock button"
+    dialogue:
+      - { id: N2b, speaker: aether_vo, on_screen: false, start: 172, end: 222,
+          hi: "जो कहना था... वो कभी कहा ही नहीं।" }
+
+  - id: sh040
+    scene: SC2
+    start: 228
+    end: 264
+    duration_s: 1.5
+    level: A
+    framing: medium close-up, frontal 3/4
+    background: bg02_city_rain
+    characters: [aether_adult]
+    camera: "micro push-in on 1s; frame bleaches to white over last 12f"
+    fx: [blinding white light from frame right, rain freezes mid-air at f246, white-out]
+    light: "white key from right overpowers all"
+    acting: "Head turns toward light (6 drawings on 2s), eyes widen, pupils contract; no gore, no impact shown"
+    dialogue: []
+
+  - id: sh050
+    scene: SC3
+    start: 264
+    end: 312
+    duration_s: 2.0
+    level: A
+    framing: extreme close-up (right eye)
+    background: bg03_nexus (reflected in iris only)
+    characters: [aether_adult]
+    camera: "locked, very slow 1.03x push"
+    fx: [white fades to deep violet over first 12f, galaxy reflection in iris, tiny glints]
+    light: "soft violet ambient, silver rim on lashes"
+    acting: "Lashes tremble (f270), eye opens in 3 drawings (f282-f290), iris focuses, one slow blink at f300"
+    dialogue: []
+
+  - id: sh060
+    scene: SC3
+    start: 312
+    end: 408
+    duration_s: 4.0
+    level: C
+    framing: crane-up, extreme wide reveal
+    background: bg03_nexus (crane plate, tall)
+    characters: [aether_adult]
+    camera: "crane up from Aether on crystal platform to reveal floating islands and galaxies; ease in/out"
+    fx: [drifting star motes, slow galaxy rotation, island waterfalls of light]
+    light: "blue-violet ambient, silver key from upper left"
+    acting: "Aether sits up (key poses on 3s), looks left, right, pats his chest — curious, half amused"
+    dialogue:
+      - { id: L01, speaker: aether, on_screen: true, start: 334, end: 370,
+          hi: "ये... कहाँ आ गया मैं?" }
+      - { id: L02, speaker: aether, on_screen: true, start: 378, end: 404,
+          hi: "...ऑफ़िस तो नहीं है।" }
+
+  - id: sh070
+    scene: SC4
+    start: 408
+    end: 456
+    duration_s: 2.0
+    level: A
+    framing: medium close-up, profile → 3/4
+    background: bg03_nexus
+    characters: [aether_adult]
+    camera: "locked; slight rack-focus (fg particles sharp → Aether sharp)"
+    fx: [golden particles drift past face, begin to spiral behind him]
+    light: "warm gold kicker grows from frame left behind him"
+    acting: "Particle touches his cheek; he turns his head over his shoulder (8 drawings on 2s, anticipation dip)"
+    dialogue: []
+
+  - id: sh080
+    scene: SC4
+    start: 456
+    end: 552
+    duration_s: 4.0
+    level: B
+    framing: low angle, full figure → medium
+    background: bg03_nexus (sky arch)
+    characters: [elaria]
+    camera: "slow tilt up from her feet to face, then settle; ease out"
+    fx: [particle vortex coalesces into her silhouette (f456-f484), divine glow layer, hair unfurls]
+    light: "gold backlight from behind her, silver fill"
+    acting: "Forms from particles; hair and robe settle (cycle on 3s); eyes open golden at f486; gentle smile"
+    dialogue:
+      - { id: L03, speaker: elaria, on_screen: true, start: 490, end: 550,
+          hi: "आखिरकार... तुम यहाँ पहुँच ही गए।" }
+
+  - id: sh090
+    scene: SC5
+    start: 552
+    end: 600
+    duration_s: 2.0
+    level: B
+    framing: medium close-up
+    background: bg03_nexus
+    characters: [aether_adult]
+    camera: "locked"
+    fx: [particles settling]
+    light: "gold from Elaria (frame right), violet ambient"
+    acting: "Confused half-smile fades as realization starts; eyes drift down"
+    dialogue:
+      - { id: L04, speaker: aether, on_screen: true, start: 556, end: 598,
+          hi: "पहुँच गया...? मतलब... मैं..." }
+
+  - id: sh100
+    scene: SC5
+    start: 600
+    end: 684
+    duration_s: 3.5
+    level: B
+    framing: close-up
+    background: bg03_nexus (defocused)
+    characters: [elaria]
+    camera: "slow push-in 1.0 → 1.08"
+    fx: [Divine Knowledge — golden rune ring rotates inside her irises (f600-f630), soft halo pulse]
+    light: "gold rim, cool silver fill"
+    acting: "Eyes glow while reading his soul, then soften; small compassionate nod on the first word"
+    dialogue:
+      - { id: L05, speaker: elaria, on_screen: true, start: 606, end: 682,
+          hi: "हाँ। तुम्हारा पिछला जीवन... समाप्त हो चुका है।" }
+
+  - id: sh110
+    scene: SC5
+    start: 684
+    end: 744
+    duration_s: 2.5
+    level: A
+    framing: extreme close-up (eyes + mouth)
+    background: bg03_nexus (defocused)
+    characters: [aether_adult]
+    camera: "locked; very slow push"
+    fx: [tear highlight, background particles dim]
+    light: "cool, desaturated; warm rim fades"
+    acting: "Eyes tremble, tear wells and falls (on 2s), lips part; breath in; whispers"
+    dialogue:
+      - { id: L06, speaker: aether, on_screen: true, start: 716, end: 736,
+          hi: "माँ..." }
+
+  - id: sh120
+    scene: SC6
+    start: 744
+    end: 852
+    duration_s: 4.5
+    level: B
+    framing: over-the-shoulder (behind Aether) on Elaria, medium
+    background: bg03_nexus
+    characters: [aether_adult, elaria]
+    camera: "slow arc 6 degrees left with parallax; settle"
+    fx: [particles brighten as she approaches]
+    light: "gold from Elaria, violet ambient"
+    acting: "Elaria glides one step closer, bends slightly, extends an open hand"
+    dialogue:
+      - { id: L07, speaker: elaria, on_screen: true, start: 758, end: 840,
+          hi: "अगर तुम्हें एक और मौका मिले... तो क्या करोगे?" }
+
+  - id: sh130
+    scene: SC7
+    start: 852
+    end: 960
+    duration_s: 4.5
+    level: A
+    level_note: "A for the expression change f852-f900 (~2 s); B for the rest"
+    framing: medium close-up → medium (hand enters)
+    background: bg03_nexus
+    characters: [aether_adult]
+    camera: "locked, then slow push as he speaks"
+    fx: [warm light rises on his face, star motes brighten]
+    light: "warm gold key returns, colour comes back"
+    acting: "Wipes tear with wrist, short laugh-breath, grin, then resolve; takes her hand at f940"
+    dialogue:
+      - { id: L08, speaker: aether, on_screen: true, start: 880, end: 938,
+          hi: "इस बार... हर पल खुलकर जिऊँगा।" }
+
+  - id: sh140
+    scene: SC8
+    start: 960
+    end: 1032
+    duration_s: 3.0
+    level: B
+    framing: wide two-shot
+    background: bg03_nexus
+    characters: [aether_adult, elaria]
+    camera: "slow pull-back; at f1010 light bloom fills frame"
+    fx: [golden magic circle under Aether, rising light columns, Aether dissolves into light from feet up]
+    light: "gold underlight from circle"
+    acting: "Elaria raises her free palm; serene smile; Aether looks at her, nods"
+    dialogue:
+      - { id: L09, speaker: elaria, on_screen: true, start: 966, end: 1024,
+          hi: "तो जाओ... अपनी नई शुरुआत की ओर।" }
+
+  - id: sh150
+    scene: SC8
+    start: 1032
+    end: 1068
+    duration_s: 1.5
+    level: C
+    framing: tracking (light streak POV)
+    background: bg01_cosmos (speed plate)
+    characters: []
+    camera: "fast forward travel through star layers; speed lines; ends in white"
+    fx: [light streak, radial speed lines, star stretch, white-out]
+    light: "white-gold"
+    dialogue: []
+
+  - id: sh160
+    scene: SC9
+    start: 1068
+    end: 1140
+    duration_s: 3.0
+    level: B
+    framing: baby POV (blur) → close-up on baby
+    background: bg04_birth_room (soft focus)
+    characters: [aether_baby]
+    camera: "POV focus-pull from white blur to soft room (f1068-f1092), cut-in within shot to CU of baby hand/eyes (f1100)"
+    fx: [soft bloom, dust motes in sunbeam]
+    light: "warm morning sun from window, frame left"
+    acting: "Tiny hand grasps air; eyes open ocean-blue; blink; startled stare"
+    dialogue:
+      - { id: L10, speaker: aether_inner, on_screen: false, start: 1100, end: 1138,
+          hi: "...रुको। मैं... बच्चा बन गया?!" }
+
+  - id: sh170
+    scene: SC9
+    start: 1140
+    end: 1200
+    duration_s: 2.5
+    level: C
+    framing: close-up baby → title card
+    background: bg04_birth_room
+    characters: [aether_baby]
+    camera: "slow pull-back; title card animates in at f1152"
+    fx: [title card light sweep, gentle sparkle on title letters]
+    light: "warm"
+    acting: "Baby blinks twice (held cel + blink drawings), small sneeze-twitch at f1168"
+    title: { hi: "एक नई शुरुआत", rom: "Ek Nayi Shuruaat", in: 1152, out: 1200 }
+    dialogue: []
