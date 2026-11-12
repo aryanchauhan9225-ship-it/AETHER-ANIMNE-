@@ -83,12 +83,29 @@ Silhouette key: <cloak shape, weapon, hair shape>
 
 ### 2.5 Lighting modes (palette variants)
 
+Each lighting mode is a **separate colour model** (a matching palette for
+that light, called *iro-shitei* in Japanese studios), not a tint laid over
+the whole frame. Because characters are painted only in flat palette
+colours, compositing can swap each day colour for its matching colour in
+another mode, one colour at a time. Nothing is repainted.
+
 | Mode | Use | Implementation |
 |---|---|---|
 | Day (standard) | Default | Base palette |
-| Dusk | Warm scenes | Composite colour layer |
-| Night | Dark scenes | Composite colour layer + reduced saturation |
-| Aether-lit | Magic events | Composite glow + rim light (colour TBD) |
+| Dusk | Warm scenes | Dusk palette, swapped in during compositing |
+| Night | Dark scenes | Night palette, swapped in during compositing + reduced saturation |
+| Aether-lit | Magic events | Aether palette, swapped in during compositing + glow + rim light (colour TBD) |
+
+Rules:
+- Each palette variant defines **base, shadow, line and highlight**
+  separately. Never derive them by multiplying everything by one tint.
+- **Skin gets its own colour in every mode.** A scene-wide tint turns faces
+  pink or grey under coloured light.
+- The hero has **one accent colour** that stays readable in every mode.
+- **Colour fills must have hard edges (no anti-aliasing); only lines are
+  anti-aliased.** That keeps fill colours exact, so the per-colour swap
+  works. Set the Krita fill tool and the OpenToonz ink-and-paint settings
+  accordingly.
 
 ---
 
@@ -119,6 +136,24 @@ Silhouette key: <cloak shape, weapon, hair shape>
 | Smoke / fire | Hand-drawn shapes, on 2s/3s, flat 2-tone |
 
 Folder: `art/fx/`
+
+### 4.1 Light & glow techniques (compositing)
+
+How AETHER's light and magic are built in `studio/src/lib/FX` and `Grade`.
+Several of these are inspired by Lemo-Opuscar's *80s Cel Anime* style
+(see `docs/credits.md`). We write our own implementation.
+
+| Technique | Rule |
+|---|---|
+| **Separate glow layer** | Everything that emits light (aether energy, lamps, glowing eyes, runes) is also drawn onto a separate **glow layer**. Bloom is generated mainly from that layer. Ordinary painted colour blooms only weakly and only above a high brightness threshold, which stops white clothing and skies glowing pink. |
+| **Character masking** | Each character's silhouette is stamped **black** into the glow layer, so glow from behind never bleeds through a character. Backlit glow wraps around edges only. |
+| **Halation** | The widest, softest bloom ring is tinted warm (red-orange), like light spreading in film. Keep it subtle. |
+| **Rim light** | Built from the character's own shape, offset 2–4 px away from the light source and clipped to the character. Thicker rims swallow thin shapes such as fingers and hair tips. |
+| **Light-band sweep** | A coloured band of light slides across a *held* drawing (clipped to the character). This adds drama or tension without new drawings. Keep it weaker on faces. |
+| **Impact frames** | 2 frames of an inverted or single-colour silhouette over radial lines, then the result. Pair with 6–12 frames of camera shake. |
+| **Flares** | Used sparingly: star-burst for magic flashes, horizontal anamorphic streak for strong lights. |
+| **Moving backgrounds** | Add a slight horizontal blur (~8–16 px) to background layers during fast pans to prevent strobing. |
+| **Order of operations** | Limit bright values before any contrast curve so highlights don't turn into black holes. Subtitles are added after the grade. |
 
 ---
 
@@ -171,4 +206,4 @@ memory.
 - **Not used for characters.** AI images drift off-model between shots.
 - May be used only for **background or layout concepts**, which must be
   fully painted over and checked for licensing.
-- Any AI use is recorded in `docs/credits.md` (to be created).
+- Any AI use is recorded in `docs/credits.md`.

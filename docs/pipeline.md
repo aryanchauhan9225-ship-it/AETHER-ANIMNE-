@@ -36,6 +36,10 @@
 
 > **Not yet installed:** Remotion (Node packages), Rhubarb, any Python
 > packages. Each will be proposed for approval before installation.
+>
+> **Remotion is the single compositing engine.** No second rendering engine
+> is used (see §11). Licences and credits for all tools and third-party
+> material are tracked in `docs/credits.md`.
 
 ---
 
@@ -179,12 +183,23 @@ studio/
         ├── CharacterLayers stepped (on 2s/3s) layer swaps for Level C
         ├── LipSync         mouth swaps from lip-sync JSON
         ├── Blink           blink timing
-        ├── FX              particles, glow, light rays, aether energy
-        └── Grade           colour grade, letterbox, film grain
+        ├── FX              particles, glow layer + bloom, halation, rim light,
+        │                   light-band sweeps, impact frames, flares, aether energy
+        ├── PaletteRemap    day → dusk / night / aether colour swap, one colour at a time
+        └── Grade           colour grade, letterbox, film grain, subtitles last
 ```
 
 Artwork enters Remotion as **exported PNGs only**. Krita / OpenToonz
 sources are never read directly.
+
+The light and glow rules these modules implement are in
+`docs/style-guide.md` §2.5 and §4.1.
+
+**Third-party code policy:** FX and Grade are written from scratch. Outside
+techniques serve as **inspiration**; large portions of third-party code are
+not copied. If any substantial portion of MIT-licensed code is ever reused,
+its copyright and permission notice is kept in the file header and the reuse
+is recorded in `docs/credits.md`.
 
 ---
 
@@ -198,3 +213,12 @@ sources are never read directly.
 | G4 | Design pack sign-off (no animation before this) |
 | G5 | Animatic timing lock |
 | G6 | Final render & delivery |
+
+---
+
+## 11. Tools evaluated and not adopted
+
+| Tool | Decision | Reason |
+|---|---|---|
+| Blender | Not used | Project rule. |
+| **Lemo-Opuscar** (Claude Code plugin, `lemomo-ai/lemo-opuscar`) | **Not installed** (approved 2026-11-12) | It renders complete films in its own engine, with characters drawn in code instead of by artists. It has no documented Hindi text-to-speech or Hindi speech check. It needs ffmpeg 7+, a second Chromium browser and ~1–2.5 GB of downloads per cloud session, and it would compete with Remotion. Its MIT-licensed light and glow techniques are used as **inspiration only** (style guide §4.1, credits). |
