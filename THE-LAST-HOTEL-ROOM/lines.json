@@ -1,0 +1,5 @@
+[
+ {"id": "g1", "text": "तीन सौ नौ... की लाइट?", "voice": "hm_omega", "lang": "hi", "speed": 0.82, "asr": "309 की लाइट"},
+ {"id": "g2", "text": "कोई है?", "voice": "hm_omega", "lang": "hi", "speed": 0.8},
+ {"id": "v1", "text": "सर... आप इतनी देर से बाहर क्यों खड़े हैं?", "voice": "hm_psi", "lang": "hi", "speed": 0.78}
+]

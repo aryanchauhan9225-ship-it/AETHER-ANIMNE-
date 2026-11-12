@@ -1,0 +1,16 @@
+THE LAST HOTEL ROOM — credits and licences
+
+Picture: real-time 3D drawn in code (three.js r170, MIT) through Lemo-Opuscar's Liminal Found Footage pipeline.
+  vhs.js and osd.js copied/adapted from Lemo-Opuscar styles/backrooms/demo; post-processing core/three/post.js;
+  rendering core/render (video.mjs, mux.sh). Lemo-Opuscar by Lemomo (LemoLab), https://github.com/lemomo-ai/lemo-opuscar
+  Code: MIT License, Copyright (c) 2026 Lemomo (LemoLab). Style rules: styles/backrooms/STYLE.md (CC BY-NC 4.0 with the
+  library's additional permission for making your own films).
+  New for this film: world.js, tex.js, story.js, subs.js, main.js, mix.py. Hotel, rooms, props and story are original.
+Voices: Kokoro-82M (Apache-2.0) via kokoro-onnx, Hindi voices hm_omega and hm_psi; checked with faster-whisper (MIT),
+  Whisper "small" model (MIT).
+Music: original waltz, sampled instruments VS Chamber Orchestra 2 Community Edition (Versilian Studios / Sam Gossner)
+  and VCSL (Versilian Studios), both CC0 1.0.
+Sound effects: synthesized (numpy/scipy) with Lemo core/audio/sfx.py (MIT).
+Fonts: IBM Plex Mono (SIL Open Font License 1.1). OSD font: Lemo's dot-matrix font (MIT).
+Mastering: FFmpeg static build (BtbN FFmpeg-Builds, GPL).
+No image generator, video generator, stock footage or photographs were used.

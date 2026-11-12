@@ -1,0 +1,7 @@
+out/
+stills/
+events.json
+*.mp4
+poster.jpg
+voices/
+fonts/*.woff2
