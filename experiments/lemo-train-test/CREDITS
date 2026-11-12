@@ -1,0 +1,14 @@
+The Unscheduled Train — 10 s Lemo-Opuscar evaluation film for the AETHER project
+
+Picture: drawn entirely in code. No image generator, no video generator, no stock imagery.
+  Engine code copied from Lemo-Opuscar, styles/cel-anime-80s/demo (cel.js, post.js, fx.js; head.js adapted from head80.js:
+  goggles made optional). Lemo-Opuscar by Lemomo (LemoLab), https://github.com/lemomo-ai/lemo-opuscar
+  Code: MIT License, Copyright (c) 2026 Lemomo (LemoLab). Style rules followed from styles/cel-anime-80s/STYLE.md
+  (CC BY-NC 4.0 with the library's additional permission for making your own films).
+  New for this film: figure.js (standing traveller rig + back view), train.js, scenes.js, pal.js, story.js, main.js.
+  Character, train and station designs are original.
+Sound: synthesized in numpy (FM e-piano, synth brass, FM bells, procedural foley via Lemo core/audio/sfx.py, MIT).
+  No samples, no sample libraries, no voice.
+Rendering/mastering: Lemo core/render (video.mjs, mux.sh: two-pass loudnorm -14 LUFS) with a static FFmpeg build
+  (BtbN FFmpeg-Builds, GPL) installed to ~/opt/ffmpeg7; Chromium headless (Playwright, preinstalled).
+Fonts: none used in the film.
