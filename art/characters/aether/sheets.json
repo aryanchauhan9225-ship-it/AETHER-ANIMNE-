@@ -1,0 +1,41 @@
+{
+  "_about": "Prompt pack for Aether (adult, previous life, 26) in Lemo-Opuscar's sheets.json format (see $LIB/styles/comic-history/demo/tools/sheets.json). NOT YET GENERATED. Order matters: sheet 1 is the master; every later sheet attaches the approved master (and, for parts, the expression sheet) as reference (gen_image.py --ref, or attach it in ChatGPT). Part sheets are on flat chroma green #00B140 so they can be keyed and cut by an adapted extract.py. Canon: art/characters/aether/design-spec.md. Creation Authority must never be shown: no glow, aura, symbols or magic on him.",
+  "style_block": "Modern Japanese TV anime illustration, clean professional settei quality: crisp thin dark-brown line art with tapered line weight, cel shading with exactly one hard-edged shadow tone and one highlight tone per material, no gradients on skin or clothing except a soft blush, natural adult proportions (about 7 heads tall), realistic jaw and neck anatomy, slim but not exaggerated build. Our own original character design: it must not resemble any existing anime, manga or game character. No text, no labels, no watermark.",
+  "character_block": "Aether, an original Indian-born young man aged 26, an office worker: softly angular face with a defined but gentle jawline and a slightly pointed chin, almond-shaped expressive eyes of medium size (not oversized), ocean-blue irises with three tones (deep navy upper third, ocean blue middle, light aqua lower crescent), a thin darker limbal ring, a large oval highlight top-left and a small round highlight bottom-right, a thick dark upper lash line that flicks outward with two small lash points, a light lower lash line; medium-thick expressive brown eyebrows; small nose drawn with one shadow plane; natural lips. Hair: medium-short, warm medium brown (base #6B4A33, shadow #4A3122, highlight #9A7254), naturally messy with layered locks: exactly five fringe locks across the forehead, the longest lock falling between the eyes slightly to his left, two locks over each ear, one cowlick standing up at the back of the crown, a broken angel-ring highlight across the crown. Skin warm light tan (base #F4D9C4, shadow #DDB29A). Clothing: white office shirt with sleeves rolled to the forearm and top button open, navy tie loosened about 5 cm below the collar, charcoal-grey slacks, black office shoes, a blue lanyard with a blank white ID card (no logo, no text).",
+  "sheets": [
+    {
+      "id": "master",
+      "file": "src/aether-master.png",
+      "aspect": "16:9",
+      "prompt": "{style_block} Character model sheet (turnaround) on a plain very light grey background: the same character shown full body in FRONT view, THREE-QUARTER view facing right, and SIDE (profile) view facing right, plus a BACK view, all standing in a relaxed neutral pose at exactly the same height and scale, aligned on one ground line, with faint horizontal guide lines at the top of the head, eye line, chin, shoulders, waist, knees and feet. Above the turnaround, a row of three large head close-ups (front, three-quarter, profile) showing the eye and hair construction clearly. {character_block} Neutral calm expression in every view. Consistent design in every view: same hair lock count and shapes, same eye colour, same clothing details."
+    },
+    {
+      "id": "expressions",
+      "file": "src/aether-expressions.png",
+      "aspect": "16:9",
+      "reference": ["src/aether-master.png"],
+      "prompt": "{style_block} Match the attached reference model sheet exactly: the same character, same face construction, same hair locks, same ocean-blue eyes, same line and shading style. An expression sheet on a plain very light grey background: twelve head-and-shoulders portraits in the THREE-QUARTER view facing right, identical head size and angle, arranged in a 4×3 grid: tired neutral (eyelids 70% open), shocked (eyes wide, pupils small), waking up (eyes half open, unfocused), curious awe (brows raised, lips parted), deadpan joke (half-lidded, one-sided smile rising on his left), confused half-smile, grief (brows pinched upward, eyes wet, one tear on the cheek), laughing through tears, crooked grin, quiet resolve (level brows, closed-mouth smile), determined, gentle smile. {character_block}"
+    },
+    {
+      "id": "head-parts",
+      "file": "src/aether-head-parts.png",
+      "aspect": "16:9",
+      "reference": ["src/aether-master.png", "src/aether-expressions.png"],
+      "prompt": "{style_block} Match the attached references exactly in character design and drawing style. An animation part sheet for a 2D cut-out rig of the character's head in the THREE-QUARTER view facing right, drawn large. Every piece is separate, laid out in a grid with wide clear gaps on a pure flat chroma-green background (#00B140), with no shadows on the green and nothing overlapping: (1) bald face base with ears, nose and neck, no eyes, no eyebrows, no mouth, no hair; (2) back hair mass as one piece; (3) each of the five fringe locks as its own piece; (4) the two side-lock groups as separate pieces; (5) the cowlick; (6) left and right eye whites as separate pieces; (7) left and right irises with pupil and highlights as separate round pieces, slightly larger than visible so they can slide; (8) upper eyelid with lashes for each eye in four states: open, half closed, closed, wide open; (9) lower lash line for each eye; (10) eyebrows for each side in four states: neutral, raised, sad pinched, angry. Same scale for all pieces as they would appear assembled. {character_block}"
+    },
+    {
+      "id": "mouths",
+      "file": "src/aether-mouths.png",
+      "aspect": "16:9",
+      "reference": ["src/aether-master.png", "src/aether-head-parts.png"],
+      "prompt": "{style_block} Match the attached references exactly. A mouth chart for lip-sync of the same character in the THREE-QUARTER view facing right, at the same scale as the attached head parts: each mouth drawn as a separate piece including the lip line, mouth interior, teeth and tongue where visible, laid out in a grid with wide clear gaps on a pure flat chroma-green background (#00B140): rest closed, lips pressed closed (M/B/P), wide open (aa), spread (ee), rounded (oo), teeth slightly open with tongue tip (t/d/n/l/s), lower lip touching upper teeth (f/v), plus gentle smile, crooked grin rising on his left side, open laugh, trembling sad mouth. No shadows on the green, nothing overlapping."
+    },
+    {
+      "id": "body-parts",
+      "file": "src/aether-body-parts.png",
+      "aspect": "16:9",
+      "reference": ["src/aether-master.png"],
+      "prompt": "{style_block} Match the attached reference model sheet exactly. An animation part sheet for a 2D cut-out rig of the character's upper body in the THREE-QUARTER view facing right. Every piece separate, laid out with wide clear gaps on a pure flat chroma-green background (#00B140): torso with shirt, collar, loosened navy tie and lanyard with blank ID card (one piece, arms removed); left upper arm with shirt sleeve; left forearm with rolled sleeve; right upper arm; right forearm with rolled sleeve; hands as separate pieces: relaxed open, loose fist, pointing, palm raised, hand wiping the eye with the wrist, hand reaching forward. Each piece is drawn slightly longer at the joint ends with a rounded overlap so joints hide when assembled. A small dot marks each joint pivot. No shadows on the green, nothing overlapping. {character_block}"
+    }
+  ]
+}
