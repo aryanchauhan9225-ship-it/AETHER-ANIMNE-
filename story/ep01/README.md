@@ -13,7 +13,7 @@ No artwork, animation, audio or renders exist yet.**
 | [`voice-lipsync.md`](voice-lipsync.md) | Casting, recording spec, pronunciation, line direction, Hindi lip-sync workflow and key mouth shapes |
 | [`sound-timeline.md`](sound-timeline.md) | Music cues, ambience beds, SFX cue list with frame numbers, mix targets |
 | [`production-checklist.md`](production-checklist.md) | Gate-by-gate checklist for Krita, OpenToonz, Remotion and FFmpeg |
-| `storyboard/` | *(to be created)* Storyboard panels drawn in Krita |
+| [`storyboard/`](storyboard/README.md) | 40 storyboard panels. **v0 = code-drawn SVG layout panels**; drawn Krita panels replace them one by one (same ids) |
 
 Related specs outside this folder:
 - `art/characters/aether/design-spec.md`

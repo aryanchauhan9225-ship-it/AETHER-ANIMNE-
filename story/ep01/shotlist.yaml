@@ -308,3 +308,52 @@ shots:
     acting: "Baby blinks twice (held cel + blink drawings), small sneeze-twitch at f1168"
     title: { hi: "एक नई शुरुआत", rom: "Ek Nayi Shuruaat", in: 1152, out: 1200 }
     dialogue: []
+
+# ---------------------------------------------------------------------------
+# STORYBOARD / ANIMATIC PANELS (hybrid workflow, option C)
+# 40 panels covering all 1,200 frames. Panel art: story/ep01/storyboard/<id>.svg
+# (v0 = code-drawn layout panels; artists replace them later with drawn Krita
+# panels of the same id). Camera: z = zoom [start, end]; c = framing centre
+# offset [[x, y] start, [x, y] end] as a fraction of frame size (+x = right,
+# +y = down); shake = px; ease in/out. fade = {in|out: colour, f: frames}.
+panels:
+  - { id: sh010_p01, shot: sh010, start: 0,    end: 24,   cam: { z: [1.00, 1.04] }, fade: { in: black, f: 12 }, desc: "Darkness; a pinprick star appears at centre" }
+  - { id: sh010_p02, shot: sh010, start: 24,   end: 96,   cam: { z: [1.04, 1.15] }, desc: "Star ignites: warm flare, nebula ribbon, dust" }
+  - { id: sh020_p01, shot: sh020, start: 96,   end: 132,  cam: { z: [1.12, 1.12], c: [[-0.04, 0], [0.0, 0]] }, desc: "High wide: rainy neon street, Aether walks right against umbrella crowd" }
+  - { id: sh020_p02, shot: sh020, start: 132,  end: 168,  cam: { z: [1.12, 1.12], c: [[0.0, 0], [0.04, 0]] }, desc: "Track continues; Aether further right, shoulders slumped" }
+  - { id: sh030_p01, shot: sh030, start: 168,  end: 204,  cam: { z: [1.05, 1.05], shake: 2 }, desc: "Insert: phone 'माँ — 3 मिस्ड कॉल', thumb hovers over call" }
+  - { id: sh030_p02, shot: sh030, start: 204,  end: 228,  cam: { z: [1.05, 1.05], shake: 2 }, desc: "Thumb presses lock; dark screen reflects his face" }
+  - { id: sh040_p01, shot: sh040, start: 228,  end: 246,  cam: { z: [1.00, 1.02] }, desc: "MCU: Aether turns toward white light from the right" }
+  - { id: sh040_p02, shot: sh040, start: 246,  end: 264,  cam: { z: [1.02, 1.05] }, fade: { out: white, f: 12 }, desc: "Shock; rain frozen; white floods the frame" }
+  - { id: sh050_p01, shot: sh050, start: 264,  end: 284,  cam: { z: [1.00, 1.01] }, fade: { in: white, f: 12 }, desc: "ECU closed eye; white fades to violet" }
+  - { id: sh050_p02, shot: sh050, start: 284,  end: 312,  cam: { z: [1.01, 1.03] }, desc: "Eye open: ocean-blue iris reflecting galaxies" }
+  - { id: sh060_p01, shot: sh060, start: 312,  end: 336,  cam: { z: [1.15, 1.15], c: [[0, 0.05], [0, 0.0]] }, desc: "Aether sits up on the crystal platform" }
+  - { id: sh060_p02, shot: sh060, start: 336,  end: 372,  cam: { z: [1.15, 1.10], c: [[0, 0.03], [0, -0.03]] }, desc: "Looks around, hand on chest — L01" }
+  - { id: sh060_p03, shot: sh060, start: 372,  end: 408,  cam: { z: [1.20, 1.00], c: [[0, 0.06], [0, 0.0]] }, desc: "Crane up: extreme wide Astral Nexus, Aether tiny — L02" }
+  - { id: sh070_p01, shot: sh070, start: 408,  end: 428,  cam: { z: [1.05, 1.05] }, desc: "Profile MCU; a golden particle touches his cheek" }
+  - { id: sh070_p02, shot: sh070, start: 428,  end: 456,  cam: { z: [1.05, 1.07] }, desc: "He turns over his shoulder; particles spiral behind" }
+  - { id: sh080_p01, shot: sh080, start: 456,  end: 486,  cam: { z: [1.25, 1.25], c: [[0, 0.08], [0, 0.03]] }, desc: "Low angle: particle vortex forms a silhouette under the arch" }
+  - { id: sh080_p02, shot: sh080, start: 486,  end: 520,  cam: { z: [1.25, 1.15], c: [[0, 0.06], [0, -0.06]] }, desc: "Elaria complete, eyes open gold, hair unfurled — L03 begins" }
+  - { id: sh080_p03, shot: sh080, start: 520,  end: 552,  cam: { z: [1.10, 1.10] }, desc: "Medium low angle: faint knowing smile" }
+  - { id: sh090_p01, shot: sh090, start: 552,  end: 576,  cam: { z: [1.00, 1.00] }, desc: "MCU Aether: confused half-smile — 'पहुँच गया...?'" }
+  - { id: sh090_p02, shot: sh090, start: 576,  end: 600,  cam: { z: [1.00, 1.00] }, desc: "Realization; eyes drift down — 'मैं...'" }
+  - { id: sh100_p01, shot: sh100, start: 600,  end: 630,  cam: { z: [1.00, 1.04] }, desc: "CU Elaria: Divine Knowledge rune rings in her irises" }
+  - { id: sh100_p02, shot: sh100, start: 630,  end: 684,  cam: { z: [1.04, 1.08] }, desc: "Glow fades to compassion — L05" }
+  - { id: sh110_p01, shot: sh110, start: 684,  end: 700,  cam: { z: [1.00, 1.01] }, desc: "ECU: eyes tremble, brows pinch, tear wells" }
+  - { id: sh110_p02, shot: sh110, start: 700,  end: 716,  cam: { z: [1.01, 1.02] }, desc: "Tear rolls; lips part" }
+  - { id: sh110_p03, shot: sh110, start: 716,  end: 744,  cam: { z: [1.02, 1.03] }, desc: "Whisper 'माँ...'; colour drained" }
+  - { id: sh120_p01, shot: sh120, start: 744,  end: 792,  cam: { z: [1.10, 1.10], c: [[0.02, 0], [-0.02, 0]] }, desc: "OTS: Elaria glides closer; Aether's head soft in foreground" }
+  - { id: sh120_p02, shot: sh120, start: 792,  end: 852,  cam: { z: [1.10, 1.10], c: [[-0.02, 0], [-0.02, 0]] }, desc: "She bends slightly, offers an open hand — L07" }
+  - { id: sh130_p01, shot: sh130, start: 852,  end: 876,  cam: { z: [1.00, 1.00] }, desc: "Aether wipes the tear with his wrist" }
+  - { id: sh130_p02, shot: sh130, start: 876,  end: 920,  cam: { z: [1.00, 1.04] }, desc: "Laugh-breath to crooked grin to resolve; warm light returns — L08" }
+  - { id: sh130_p03, shot: sh130, start: 920,  end: 960,  cam: { z: [1.04, 1.06] }, desc: "He reaches out and takes her hand" }
+  - { id: sh140_p01, shot: sh140, start: 960,  end: 990,  cam: { z: [1.06, 1.04] }, desc: "Wide two-shot: Elaria raises her palm; magic circle opens — L09" }
+  - { id: sh140_p02, shot: sh140, start: 990,  end: 1010, cam: { z: [1.04, 1.02] }, desc: "Light columns rise; Aether nods" }
+  - { id: sh140_p03, shot: sh140, start: 1010, end: 1032, cam: { z: [1.02, 1.00] }, desc: "Aether dissolves into light from the feet up; bloom" }
+  - { id: sh150_p01, shot: sh150, start: 1032, end: 1068, cam: { z: [1.00, 1.60], shake: 6 }, fade: { out: white, f: 12 }, desc: "Light-streak travel through stars; speed lines; white" }
+  - { id: sh160_p01, shot: sh160, start: 1068, end: 1090, cam: { z: [1.00, 1.00] }, fade: { in: white, f: 18 }, desc: "Baby POV: white blur resolves into a warm soft room" }
+  - { id: sh160_p02, shot: sh160, start: 1090, end: 1112, cam: { z: [1.00, 1.00] }, desc: "CU tiny hand grasping air" }
+  - { id: sh160_p03, shot: sh160, start: 1112, end: 1140, cam: { z: [1.00, 1.02] }, desc: "Baby's ocean-blue eyes open — startled stare — L10" }
+  - { id: sh170_p01, shot: sh170, start: 1140, end: 1152, cam: { z: [1.10, 1.08] }, desc: "Baby blinks" }
+  - { id: sh170_p02, shot: sh170, start: 1152, end: 1168, cam: { z: [1.08, 1.04] }, desc: "Pull back; title card begins to reveal" }
+  - { id: sh170_p03, shot: sh170, start: 1168, end: 1200, cam: { z: [1.04, 1.00] }, desc: "Tiny sneeze; full title 'एक नई शुरुआत'" }
