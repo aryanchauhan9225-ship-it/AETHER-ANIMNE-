@@ -1,0 +1,71 @@
+# ============================================================
+# AETHER — .gitattributes
+# Text files: normalised to LF.
+# Heavy binary art/audio/video: stored with Git LFS.
+# NOTE: GitHub free LFS quota is ~1 GB storage / 1 GB bandwidth
+# per month. See docs/pipeline.md → "Storage strategy".
+# ============================================================
+
+* text=auto eol=lf
+
+# ---- Text formats (diffable, NOT in LFS) -------------------
+*.md      text
+*.txt     text
+*.yaml    text
+*.yml     text
+*.json    text
+*.srt     text
+*.vtt     text
+*.ts      text
+*.tsx     text
+*.js      text
+*.py      text
+*.sh      text eol=lf
+*.svg     text
+# Krita / GIMP palette (plain text)
+*.gpl     text
+# OpenToonz scene & palette files are XML
+*.tnz     text
+*.tpl     text
+*.tnzbat  text
+
+# ---- Krita / Photoshop sources -----------------------------
+*.kra     filter=lfs diff=lfs merge=lfs -text
+*.psd     filter=lfs diff=lfs merge=lfs -text
+*.ora     filter=lfs diff=lfs merge=lfs -text
+*.bundle  filter=lfs diff=lfs merge=lfs -text
+
+# ---- OpenToonz levels --------------------------------------
+*.pli     filter=lfs diff=lfs merge=lfs -text
+*.tlv     filter=lfs diff=lfs merge=lfs -text
+*.tzp     filter=lfs diff=lfs merge=lfs -text
+*.tzl     filter=lfs diff=lfs merge=lfs -text
+
+# ---- Raster images / frame sequences -----------------------
+*.png     filter=lfs diff=lfs merge=lfs -text
+*.jpg     filter=lfs diff=lfs merge=lfs -text
+*.jpeg    filter=lfs diff=lfs merge=lfs -text
+*.webp    filter=lfs diff=lfs merge=lfs -text
+*.tif     filter=lfs diff=lfs merge=lfs -text
+*.tiff    filter=lfs diff=lfs merge=lfs -text
+*.exr     filter=lfs diff=lfs merge=lfs -text
+*.gif     filter=lfs diff=lfs merge=lfs -text
+
+# ---- Audio -------------------------------------------------
+*.wav     filter=lfs diff=lfs merge=lfs -text
+*.flac    filter=lfs diff=lfs merge=lfs -text
+*.mp3     filter=lfs diff=lfs merge=lfs -text
+*.ogg     filter=lfs diff=lfs merge=lfs -text
+*.m4a     filter=lfs diff=lfs merge=lfs -text
+*.aup3    filter=lfs diff=lfs merge=lfs -text
+
+# ---- Video -------------------------------------------------
+*.mp4     filter=lfs diff=lfs merge=lfs -text
+*.mov     filter=lfs diff=lfs merge=lfs -text
+*.mkv     filter=lfs diff=lfs merge=lfs -text
+*.webm    filter=lfs diff=lfs merge=lfs -text
+
+# ---- Fonts (title cards / subtitles) -----------------------
+*.ttf     filter=lfs diff=lfs merge=lfs -text
+*.otf     filter=lfs diff=lfs merge=lfs -text
+*.woff2   filter=lfs diff=lfs merge=lfs -text

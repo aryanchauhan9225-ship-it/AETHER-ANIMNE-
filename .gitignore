@@ -1,0 +1,65 @@
+# ============================================================
+# AETHER — .gitignore
+# Tools: Krita · OpenToonz · Remotion · FFmpeg · Audacity
+# ============================================================
+
+# ---- Render output (regenerable — never commit) ------------
+renders/*
+!renders/README.md
+!renders/.gitkeep
+
+# ---- Node / Remotion (studio/) -----------------------------
+node_modules/
+studio/out/
+studio/build/
+studio/.remotion/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Python (scripts/) -------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ---- Krita backups & autosaves -----------------------------
+*.kra~
+*.kra-autosave.kra
+*-autosave.kra
+*.png~
+
+# ---- OpenToonz auto-generated files ------------------------
+# Scene backups and thumbnail caches are recreated automatically.
+backups/
+sceneIcons/
+*.tnz.bak
+*.bak
+
+# ---- Audacity temporary / project-cache files --------------
+*.aup3-wal
+*.aup3-shm
+*_data/
+
+# ---- FFmpeg / scratch intermediates ------------------------
+*.tmp
+ffmpeg2pass-*.log
+**/_scratch/
+**/_tmp/
+
+# ---- Secrets (API keys for any TTS service etc.) -----------
+.env
+.env.*
+!.env.example
+
+# ---- OS / editor clutter -----------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
