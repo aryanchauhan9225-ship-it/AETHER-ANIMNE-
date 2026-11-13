@@ -1,0 +1,8 @@
+out/
+stills/
+events.json
+*.mp4
+*.wav
+voices/
+paper.jpg
+fonts/*.ttf
