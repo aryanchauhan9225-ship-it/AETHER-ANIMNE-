@@ -1,0 +1,9 @@
+out/
+stills/
+events.json
+*.mp4
+*.wav
+voices/
+voices_sample/
+paper.jpg
+fonts/*.ttf
