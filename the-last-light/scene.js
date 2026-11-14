@@ -25,9 +25,11 @@ function band(c, y0, y1, col, a, seed, amp = 10, t = 0) {
 function cam(c, Z, k) { const s = 1 + (Z - 1) * k; c.setTransform(s, 0, 0, s, FOCUS[0] * (1 - s), FOCUS[1] * (1 - s)); }
 
 // —— the lamp and its two opposed beams ——
-function lampOn(t) { if (t < 5) return 0; if (t < 5.7) return hash(Math.floor(t * 16)) > .45 ? .25 + .75 * seg(t, 5, 5.7) : .08; return 1; }
+// the lamp is driven per scene: LAMPF.on(t) gives brightness 0..1, LAMPF.t0 the time the rotation is referenced to
+let LAMPF = { t0: 5, on: t => { if (t < 5) return 0; if (t < 5.7) return hash(Math.floor(t * 16)) > .45 ? .25 + .75 * seg(t, 5, 5.7) : .08; return 1; } };
+function lampOn(t) { return LAMPF.on(t); }
 function beams(t) {
-  const on = lampOn(t), th = (t - 5) * Math.PI * 2 / 5.2 + 2.75, out = [];
+  const on = lampOn(t), th = (t - LAMPF.t0) * Math.PI * 2 / 5.2 + 2.75, out = [];
   for (const a of [th, th + Math.PI]) { const cs = Math.cos(a), sn = Math.sin(a); out.push({ d: cs >= 0 ? 1 : -1, len: 170 + 1500 * Math.pow(Math.abs(cs), .9), ac: Math.abs(cs), toward: sn, I: on * (.5 + .5 * sn) * (.55 + .45 * Math.abs(cs)) + on * .12 }); }
   return out;
 }
